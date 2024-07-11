@@ -1,0 +1,31 @@
+.menu {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1; /* Ensure menu is above leaderboard */
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#leaderboard {
+    display: none;
+    position: absolute;
+    top: 60px; /* Adjust top position as needed */
+    right: 10px; /* Adjust right position as needed */
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 0; /* Lower z-index to be behind menu */
+}

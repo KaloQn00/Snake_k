@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('background_full.png');
+            background-size: cover;
+        }
+        canvas {
+            background-image: url('background.png');
+            background-size: cover;
+            background-color: #ffffff;
+            border: 5px solid black; /* Add black border */
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            top: 10px;
+            width: calc(100% - 20px);
+            padding: 0 10px;
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+        button {
+            margin: 0 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #leaderboard {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <button id="playButton">Play</button>
+            <button id="resetButton" style="display: none;">Reset Game</button>
+        </div>
+        <div id="leaderboard">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboardList"></ul>
+        </div>
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <img id="apple" src="apple.png" style="display: none;">
+    <img id="snakeHead" src="snake_head.png" style="display: none;">
+    <img id="snakeBody" src="snake_body.png" style="display: none;"> <!-- Add snake body image -->
+    <script src="snake.js"></script>
+</body>
+</html>
